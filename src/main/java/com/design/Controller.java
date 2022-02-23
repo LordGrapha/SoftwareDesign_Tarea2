@@ -66,11 +66,11 @@ public class Controller {
 
     // Arreglar este para que busque la carrera por codigo y sede en gestor Carrera
     public Carrera getCarrera(String pCodigo, String pCodigoSede) {
-        return gCarreras.buscarCarrera(pCodigo);
+        return gCarreras.buscarCarrera(pCodigo, pCodigoSede);
     }
 
-    public boolean editarCarrera(Carrera pCarrera) {
-        return gCarreras.modificarCarrera(pCarrera);
+    public boolean editarCarrera(Carrera pCarrera, String pCodigoSede) {
+        return gCarreras.modificarCarrera(pCarrera, pCodigoSede);
     }
 
     public boolean crearFormulario(Formulario pUnFormulario) {
@@ -114,7 +114,9 @@ public class Controller {
         return 2000;
     }
 
-    public Formulario visualizarFormulario(int pNum,){
-        Formulario formulario = new Formulario(pNum, pEstado, pCarrera, pPuntuaje)
+    public Formulario visualizarFormulario(int pNum, TEstado pEstado, Carrera pCarrera, int pPuntuaje){
+        Formulario formulario = new Formulario(pNum, pEstado, pCarrera, pPuntuaje);
+        return formulario;
     }
 }
+
