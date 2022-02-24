@@ -34,7 +34,7 @@ public class GestorCarreras {
 
     public Carrera buscarCarrera(String pCodigo, String pCodigoSede) {
         Carrera carrera = new Carrera(pCodigo, "Carrera encontrada", 546, 150,
-                TGrado.BACHILLERATO, new Sede(pCodigoSede, "Una Sede"));
+                TGrado.BACHILLERATO, new Sede("AG132", "Una Sede"));
         return carrera;
     }
 
@@ -52,12 +52,6 @@ public class GestorCarreras {
         Carrera carrera = new Carrera(pCodigoSede, "Carrera encontrada", 546, 150,
                 TGrado.BACHILLERATO, new Sede("AG132", "Una Sede"));
         return carrera;
-    }
-
-    public ArrayList<Carrera> buscarCarrerasPorSede() {
-        ArrayList<Carrera> resultado = new ArrayList<>();
-        System.out.println("Carreras por Sede Encontradas");
-        return resultado;
     }
 
 }

@@ -64,7 +64,6 @@ public class Controller {
 
     }
 
-    // Arreglar este para que busque la carrera por codigo y sede en gestor Carrera
     public Carrera getCarrera(String pCodigo, String pCodigoSede) {
         return gCarreras.buscarCarrera(pCodigo, pCodigoSede);
     }
@@ -110,13 +109,13 @@ public class Controller {
         return gFormularios.getSolicitudesPorPuntaje(pEstado);
     }
 
-    public int getCantidadSolicitudes(TEstado pEstado){
+    public int getCantidadSolicitudes(TEstado pEstado) {
         return 2000;
     }
 
-    public Formulario visualizarFormulario(int pNum, TEstado pEstado, Carrera pCarrera, int pPuntuaje){
+    public Formulario visualizarFormulario(int pNum, TEstado pEstado, Carrera pCarrera, int pPuntuaje) {
         Formulario formulario = new Formulario(pNum, pEstado, pCarrera, pPuntuaje);
         return formulario;
     }
-}
 
+}
