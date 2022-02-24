@@ -54,4 +54,10 @@ public class GestorCarreras {
         return carrera;
     }
 
+    public ArrayList<Carrera> buscarCarrerasPorSede() {
+        ArrayList<Carrera> resultado = new ArrayList<>();
+        System.out.println("Carreras por Sede Encontradas");
+        return resultado;
+    }
+
 }
